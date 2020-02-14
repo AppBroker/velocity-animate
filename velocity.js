@@ -638,7 +638,7 @@ var window = require("global/window");
         /* The mobileHA option's behavior changes on older Android devices (Gingerbread, versions 2.3.3-2.3.7). */
         isAndroid: /Android/i.test(useragent),
         isGingerbread: /Android 2\.3\.[3-7]/i.test(useragent),
-        isChrome: window.window.chrome,
+        isChrome: false,
         isFirefox: /Firefox/i.test(useragent),
         /* Create a cached element for re-use when checking for CSS property prefixes. */
         prefixElement: document.createElement("div"),
