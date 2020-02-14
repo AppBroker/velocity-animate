@@ -3,7 +3,8 @@
 **********************/
 
 /* VelocityJS.org UI Pack (5.0.2). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License. Portions copyright Daniel Eden, Christian Pucci. */
-
+var document = require("global/document");
+var window = require("global/window");
 ;(function (factory) {
     /* CommonJS module. */
     if (typeof require === "function" && typeof exports === "object" ) {
@@ -16,6 +17,8 @@
         factory();
     }
 }(function() {
+    var document = require("global/document");
+    var window = require("global/window");
 return function (global, window, document, undefined) {
 
     /*************
