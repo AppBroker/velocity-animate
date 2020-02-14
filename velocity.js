@@ -635,12 +635,10 @@ var window = require("global/window");
         /* Detect mobile devices to determine if mobileHA should be turned on. */
         isMobile: true,
         /* The mobileHA option's behavior changes on older Android devices (Gingerbread, versions 2.3.3-2.3.7). */
-        isAndroid: /Android/i.test(request.headers["user-agent"]),
-        isGingerbread: /Android 2\.3\.[3-7]/i.test(
-          request.headers["user-agent"]
-        ),
+        isAndroid: /Android/i.test(window.navigator.userAgent),
+        isGingerbread: /Android 2\.3\.[3-7]/i.test(window.navigator.userAgent),
         isChrome: window.window.chrome,
-        isFirefox: /Firefox/i.test(request.headers["user-agent"]),
+        isFirefox: /Firefox/i.test(window.navigator.userAgent),
         /* Create a cached element for re-use when checking for CSS property prefixes. */
         prefixElement: document.createElement("div"),
         /* Cache every prefix match to avoid repeating lookups. */
